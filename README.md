@@ -92,3 +92,35 @@ Processing data...
 ### Concurrency Through Event Loop:
 
 - Single-threaded hone ke bawjood JavaScript asynchronous operations ko handle kar sakta hai Event Loop aur Web APIs ki madad se, jisme heavy tasks non-blocking tarike se execute hote hain.
+
+# SetTimeout
+
+- JavaScript ka ek built-in function hai jo ek specific delay ke baad ek function ko execute karta hai. Iska primary use asynchronous tasks ko handle karna hai jo kuch samay baad hone chahiye.
+
+#### Syntax
+
+```javascript
+setTimeout(function, delay, ...arguments);
+```
+
+- `function`: Wo callback function jo delay ke baad execute hoga.
+- `delay`: Milliseconds me time interval jo specify karta hai kitna time wait karna hai (1 second = 1000 milliseconds).
+- `arguments`: Optional. Callback function ke liye arguments pass karne ke liye.
+
+#### Example
+
+```javascript
+console.log("Pehle print hoga");
+
+setTimeout(() => {
+  console.log("2 seconds ke baad print hoga");
+}, 2000);
+
+console.log("Ye bhi pehle print hoga");
+
+Output
+Pehle print hoga
+Ye bhi pehle print hoga
+2 seconds ke baad print hoga
+
+```
