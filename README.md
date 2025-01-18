@@ -35,3 +35,33 @@ Task 1
 Task 3
 Task 2 (Delayed)
 ```
+
+# JavaScript me Asynchronous kaam kaise hota hai?
+
+- JavaScript ek single-threaded language hai, lekin asynchronous programming ke liye Event Loop aur Call Stack ka use karta hai.
+- `Call Stack`: JavaScript ke synchronous code ko execute karta hai.
+- `Web APIs`: Asynchronous tasks (e.g., setTimeout, HTTP requests) ko handle karne ke liye browser ya Node.js ke Web APIs ka use hota hai.
+- `Callback Queue`: Jab asynchronous task complete hota hai, tab uska callback function queue me add hota hai.
+- `Event Loop`: Event loop check karta hai ki Call Stack khali hai ya nahi. Agar khali hota hai, toh wo Callback Queue se task ko execute karta hai.
+
+```javascript
+const fetchData = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Data fetched!");
+  }, 2000);
+});
+
+fetchData
+  .then((data) => {
+    console.log(data);
+    console.log("Processing data...");
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+
+Output
+Data fetched!
+Processing data...
+```
