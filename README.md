@@ -65,3 +65,30 @@ Output
 Data fetched!
 Processing data...
 ```
+
+# single-threaded language kya hai ?
+
+- Single-threaded language ka matlab hai ki language ka execution ek hi thread me hota hai, jisme ek samay me sirf ek hi kaam perform kiya ja sakta hai. JavaScript ek single-threaded language hai, iska matlab hai ki iska code ek Call Stack ke madhyam se execute hota hai aur ek samay par sirf ek hi task ko process karta hai.
+
+## Thread Kya Hota Hai?
+
+- Thread ek chhota execution unit hai jo program ke instructions ko execute karta hai.
+- Ek single-threaded system me ek samay me sirf ek hi task execute hota hai.
+- Multi-threaded system me ek se zyada threads hoti hain, jo alag-alag tasks ko parallel execute kar sakti hain.
+
+## Single-threaded Language ke Features
+
+- One Task at a Time
+- Event Loop ke Sath Kaam
+- Call Stack
+
+## Why JavaScript is Single-threaded?
+
+### Designed for Web Browsers:
+
+- JavaScript originally web browsers ke liye banaya gaya tha, jisme ek user ke input aur DOM updates ko efficiently handle karna hota hai.
+- Single-threaded hona browsers ke UI ko responsive banata hai.
+
+### Concurrency Through Event Loop:
+
+- Single-threaded hone ke bawjood JavaScript asynchronous operations ko handle kar sakta hai Event Loop aur Web APIs ki madad se, jisme heavy tasks non-blocking tarike se execute hote hain.
