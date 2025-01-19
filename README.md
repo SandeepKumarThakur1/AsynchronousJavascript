@@ -124,3 +124,30 @@ Ye bhi pehle print hoga
 2 seconds ke baad print hoga
 
 ```
+
+# Generator
+
+- JavaScript mein Generators ek special type ke functions hote hain jo apne execution ko pause aur resume karne ki capability rakhte hain. Ye feature ES6 (ECMAScript 2015) mein introduce hua tha. Generators asynchronous programming aur complex logic ko simplify karte hain.
+
+## Generator Function Ka Syntax:
+
+```javascript
+function* generatorFunction() {
+  yield "First value";
+  yield "Second value";
+  return "Done";
+}
+```
+
+# Web Workers
+
+- Web Workers JavaScript ka ek feature hai jo background mein code ko execute karne ki facility deta hai bina main thread (UI thread) ko block kiye. Ye browser mein multithreading ko support karta hai, jisse heavy computations ya long-running tasks perform karte waqt user interface responsive bana rehta hai.
+
+-Web Workers ka use tab hota hai jab hume heavy processing karni ho aur saath hi user interface ko responsive rakhna ho. Agar tumhe background tasks ko efficiently handle karna ho, toh Web Workers ek powerful tool hain!
+
+## Web Workers ki Khaas Baatein
+
+- Background Execution: Web Workers background mein code run karte hain, jisse UI thread (jo DOM aur animations ko handle karta hai) slow nahi hota.
+- No Direct DOM Access: Web Workers ko directly DOM ya Window objects ko access karne ki permission nahi hoti. Ye unki isolation aur security ke liye hota hai.
+- Asynchronous Communication: Main thread aur Web Worker ke beech messages ke through communication hota hai (postMessage aur onmessage methods ka use karke).
+- Performance Improvement: Heavy tasks, jaise mathematical computations ya I/O-intensive processes, ko main thread se alag karke Web Worker mein handle kiya ja sakta hai, jo app ki performance ko boost karta hai.
